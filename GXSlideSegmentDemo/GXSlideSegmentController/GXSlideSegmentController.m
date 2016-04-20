@@ -7,10 +7,7 @@
 //
 
 #import "GXSlideSegmentController.h"
-//#import "UIView+Operation.h"
 
-/** 分段器栏高度 */
-#define SEGMENT_BAR_HEIGHT 44
 /** 指示器高度 */
 #define INDICATOR_HEIGHT 3
 
@@ -78,6 +75,7 @@
         _viewControllers = [viewControllers copy];
         _selectedIndex = NSNotFound;
         _itemWidth = 70.0;
+        _segmentBarHeight = 44.0;
     }
     return self;
 }
@@ -131,7 +129,7 @@
 - (UICollectionView *)segmentBar {
     if (!_segmentBar) {
         CGRect frame = self.view.bounds;
-        frame.size.height = SEGMENT_BAR_HEIGHT - 1;
+        frame.size.height = self.segmentBarHeight - 1;
         _segmentBar = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:self.segmentBarLayout];
         _segmentBar.backgroundColor = [UIColor whiteColor];
         _segmentBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -178,7 +176,7 @@
 - (UICollectionViewFlowLayout *)segmentBarLayout {
     if (!_segmentBarLayout) {
         _segmentBarLayout = [[UICollectionViewFlowLayout alloc] init];
-        _segmentBarLayout.itemSize = CGSizeMake(self.itemWidth, SEGMENT_BAR_HEIGHT - 1);
+        _segmentBarLayout.itemSize = CGSizeMake(self.itemWidth, self.segmentBarHeight - 1);
         _segmentBarLayout.sectionInset = UIEdgeInsetsZero;
         _segmentBarLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         _segmentBarLayout.minimumLineSpacing = 0;

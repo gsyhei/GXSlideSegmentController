@@ -76,6 +76,11 @@
  */
 @property (nonatomic, assign) CGFloat itemWidth;
 
+/**
+ *  分段器栏高度
+ */
+@property (nonatomic, assign) CGFloat segmentBarHeight;
+
 
 /**
  *  By default segmentBar use viewController's title for segment's button title
