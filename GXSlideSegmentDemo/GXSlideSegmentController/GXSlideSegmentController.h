@@ -82,9 +82,9 @@
 @property (nonatomic, assign) CGFloat segmentBarHeight;
 
 /**
- *  分段器栏高度
+ *  选择是否有动画
  */
-@property (nonatomic, assign) CGFloat segmentBarHeight;
+@property (nonatomic, assign) BOOL selectAnimated;
 
 
 /**
