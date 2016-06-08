@@ -76,6 +76,7 @@
         _selectedIndex = NSNotFound;
         _itemWidth = 70.0;
         _segmentBarHeight = 44.0;
+        _selectAnimated = YES;
     }
     return self;
 }
@@ -257,7 +258,7 @@
         [_delegate slideSegment:collectionView didSelectedViewController:vc];
     }
     [self setSelectedIndex:indexPath.row];
-    [self scrollToViewWithIndex:self.selectedIndex animated:NO];
+    [self scrollToViewWithIndex:self.selectedIndex animated:self.selectAnimated];
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
