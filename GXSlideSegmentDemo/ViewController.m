@@ -40,6 +40,7 @@
     
     GXSlideSegmentController *slideSegmentController = [[GXSlideSegmentController alloc] initWithViewControllers:vcs];
     slideSegmentController.title = @"GXSlideSegmentController";
+    slideSegmentController.segmentBarHeight = 20;
     slideSegmentController.indicatorInsets = UIEdgeInsetsMake(0, 8, 0, 8);
     slideSegmentController.indicator.backgroundColor = [UIColor redColor];
     slideSegmentController.indicator.layer.cornerRadius = slideSegmentController.indicator.frame.size.height/2;

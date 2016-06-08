@@ -81,6 +81,11 @@
  */
 @property (nonatomic, assign) CGFloat segmentBarHeight;
 
+/**
+ *  选择是否有动画
+ */
+@property (nonatomic, assign) BOOL selectAnimated;
+
 
 /**
  *  By default segmentBar use viewController's title for segment's button title
